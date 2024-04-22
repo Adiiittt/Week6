@@ -25,11 +25,12 @@ function HeaderWithButton() {
     <div>
       <button onClick={updateTitle}>Click me to change the title</button>
       <Headers title={title}> </Headers>
+      <Headers title={title}> </Headers>
     </div>
   );
 }
 
-const Headers= memo(function ({ title }) {
+const Headers= memo (function ({ title }) {
   return <div>{title}</div>;
 });
 
