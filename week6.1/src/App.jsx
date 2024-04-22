@@ -5,26 +5,31 @@ function App() {
   return (
     <div>
       <HeaderWithButton />
+      <Headers title="kirat1" />
+      <Headers title="kirat1" />
+      <Headers title="kirat1" />
+      <Headers title="kirat1" />
+      <Headers title="kirat1" />
     </div>
   );
 }
 
 function HeaderWithButton() {
-  const [firstTitle, setFirstTitle] = useState("my name is harkirat");
+  const [title, setTitle] = useState("my name is harkirat");
 
-  function changeTitle() {
-    setFirstTitle("My name is " + Math.random());
+  function updateTitle() {
+    setTitle("My name is " + Math.random());
   }
 
   return (
     <div>
-      <button onClick={changeTitle}>Click me to change the title</button>
-      <Header title={firstTitle} />
+      <button onClick={updateTitle}>Click me to change the title</button>
+      <Headers title={title}> </Headers>
     </div>
   );
 }
 
-const Header = memo(function ({ title }) {
+const Headers= memo(function ({ title }) {
   return <div>{title}</div>;
 });
 
