@@ -1,9 +1,7 @@
 import { useState } from "react";
 let GLOBAL_ID = 4;
 function App() {
-  const [todos, setTodos] = useState([
-    
-  ]);
+  const [todos, setTodos] = useState([]);
 
   function addTodo() {
     setTodos([
@@ -26,7 +24,7 @@ function App() {
   );
 }
 
-function Todo({title, description }) {
+function Todo({ title, description }) {
   return (
     <div>
       <h1>{title}</h1>
